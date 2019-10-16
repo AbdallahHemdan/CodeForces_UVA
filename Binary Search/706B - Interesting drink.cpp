@@ -55,17 +55,21 @@ typedef   long long int               ll;
 //freopen("output.txt","w",stdout);
 
 using namespace std;
+
+const int MAXN = 1e5 + 5;
+int arr[MAXN];
+
 int main() {
-	int n; 
+	int n, q, temp; 
 	cin >> n; 
-	vector<int> Arr(n); 
+	//vector<int> Arr(n); 
 	for (int i = 0; i < n; i++)
-		cin >> Arr[i]; 
-	sort(Arr.begin(), Arr.end());
-	int q , Temp; 
+		cin >> arr[i]; 
+	sort(arr, arr + n);
+
 	cin >> q; 
 	for (int i = 0; i < q; i++) {
-		cin >> Temp; 
-		cout << (upper_bound(Arr.begin(), Arr.end(), Temp)-Arr.begin()) << endl;
+		cin >> temp; 
+		cout << upper_bound(arr, arr + n, temp) - arr << endl;
 	}
 }
