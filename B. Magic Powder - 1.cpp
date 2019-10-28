@@ -52,16 +52,10 @@ int n,k ;
         }    
         return true ; 
     }
-    
-int main(){
-    cin >> n >> k ;
-    for(int i=0 ;i<n ; i++)
-        cin >> need[i] ; 
-    for(int i=0 ;i<n ; i++)
-        cin >> have[i] ;
-        
-    ll left = 0 , right = 2e9+5 , res = 0 ; 
-    
+
+ll binary_search()
+{
+ll left = 0 , right = 2e9+5 , res = 0 ;  
     while(left<=right){
         ll mid = (left+right)/2 ; 
         if(I_Can(mid)){
@@ -71,5 +65,16 @@ int main(){
         else
             right = mid - 1 ; 
     }
+    return res ;
+}
+
+int main(){
+    cin >> n >> k ;
+    for(int i=0 ;i<n ; i++)
+        cin >> need[i] ; 
+    for(int i=0 ;i<n ; i++)
+        cin >> have[i] ;
+        
+    ll res = biary_search();
     cout << res << endl ;
 }
