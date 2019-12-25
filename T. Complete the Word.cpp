@@ -58,10 +58,10 @@ int n=s.size(),q,found_Sol=0;
             {
                 if(s[j]=='?')
                 {
-                    for(int jj=0;jj<26;jj++)
-                        if(!vis[jj])
+                    for(int k = 0; k < 26; k++)
+                        if(!vis[K])
                         {
-                            s[j]=jj+'A',vis[jj]=1;
+                            s[j] = k + 'A', vis[k] = 1;
                             break;
                         }
                 }

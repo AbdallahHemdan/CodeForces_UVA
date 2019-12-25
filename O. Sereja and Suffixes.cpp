@@ -39,14 +39,14 @@ int main(){
     
 int n , m ; 
 cin >> n >> m ; 
-int arr[n] ; 
+int nums[n] ; 
 for(int i=0 ;i<n ; i++)
-    cin >> arr[i] ; 
+    cin >> nums[i] ; 
 
 set<int> st ; 
 
 for(int i=n-1 ; i>=0 ;i--){
-    st.insert(arr[i]) ; 
+    st.insert(nums[i]) ; 
     res[i]=st.size() ; 
 }
 
